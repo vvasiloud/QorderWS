@@ -16,7 +16,7 @@
 	<context:annotation-config />
 
 	<context:property-placeholder
-		location="WEB-INF/resources/hibernate/dataSource.properties" />
+		location="WEB-INF/hibernate/dataSource.properties" />
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
@@ -29,7 +29,7 @@
 		autowire="byName">
 		<property name="packagesToScan" value="com.qorder.qorderws.model" />
 		<property name="configLocation"
-			value="WEB-INF/resources/hibernate/hibernate.cfg.xml" />
+			value="WEB-INF/hibernate/hibernate.cfg.xml" />
 	</bean>
 
 	<bean id="dataSource"

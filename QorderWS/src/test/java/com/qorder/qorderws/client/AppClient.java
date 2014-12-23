@@ -40,7 +40,7 @@ public class AppClient {
 	}
 	
 	public void postNewBusiness(long ownerId, BusinessDTO business) throws HttpClientErrorException {
-		restTemplate.postForLocation(refProvider.getHttpPathFor(EEntity.BUSINESS) + "owner/" + ownerId, business);
+		restTemplate.postForObject(refProvider.getHttpPathFor(EEntity.BUSINESS) + "owner/" + ownerId, business, BusinessDTO.class); //.postForLocation(refProvider.getHttpPathFor(EEntity.BUSINESS) + "owner/" + ownerId, business);
 	}
 	
 	public void postNewProducts(String url, Long categoryId, List<DetailedProductDTO> products) throws HttpClientErrorException {

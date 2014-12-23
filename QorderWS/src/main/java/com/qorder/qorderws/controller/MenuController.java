@@ -63,6 +63,6 @@ public class MenuController {
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<String> sendException(Exception ex) {
 		LOGGER.warn("Exception was thrown, with cause " + ex.getCause() + "\nMessage: " + ex.getLocalizedMessage(), ex );
-		return new ResponseEntity<>("Exception was raised", HttpStatus.CONFLICT);
+		return new ResponseEntity<>("Exception was raised", HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 }
